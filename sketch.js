@@ -1,6 +1,7 @@
 let array = [];
 let noiseOffset = 0.0;
-let strokeWidth = 5;
+let strokeWidth = 3;
+let l;
 let sel;
 let am;
 let sp;
@@ -13,6 +14,17 @@ let ge;
 let ru;
 let po;
 let fi;
+let a_sound;
+let s_sound;
+let f_sound;
+let c_sound;
+let v_sound;
+let j_sound;
+let k_sound;
+let d_sound;
+let r_sound;
+let p_sound;
+let ph_sound;
 let languages = [{name: "Thank you"},
                   {name: "Gracias"},
                   {name: "Merci"},
@@ -25,7 +37,22 @@ let languages = [{name: "Thank you"},
                   {name: "Obrigada"},
                   {name: "Salamat"},];
 
+function preload(){
+soundFormats('mp3', 'ogg');
+a_sound = loadSound('assets/Sound_1');
+s_sound = loadSound('assets/Sound_2');
+f_sound = loadSound('assets/Sound_3');
+c_sound = loadSound('assets/Sound_4');
+v_sound = loadSound('assets/Sound_5');
+j_sound = loadSound('assets/Sound_6');
+k_sound = loadSound('assets/Sound_7');
+d_sound = loadSound('assets/Sound_8');
+r_sound = loadSound('assets/Sound_9');
+p_sound = loadSound('assets/Sound_10');
+ph_sound = loadSound('assets/Sound_11');
 
+
+}
 function setup() {
   am = loadImage('assets/flag_1.png');
   sp = loadImage('assets/flag_2.png');
@@ -56,96 +83,209 @@ function setup() {
   sel.option('Filipino');
   sel.changed(mySelectEvent);
 
+rect(windowWidth/9, windowHeight/3, 1500, 600);
+
 
 }
+
+function draw() {
+
+
+  fillColor = 255;
+  strokeWeight(3);
+  textSize(30);
+
+  // mySelectEvent();
+  if (mouseIsPressed){
+
+ line(mouseX, mouseY, pmouseX, pmouseY);
+}
+
+}
+
 
 function mySelectEvent(){
 let item = sel.value();
 
 if (item === 'English'){
-  background(am);
-text(`${languages[0].name}`, mouseX, mouseY, pmouseX, pmouseY);
+background(am);
+rect(windowWidth/9, windowHeight/3, 1500, 600);
+text(`${languages[0].name}`, 1500, 400);
+a_sound.play();
+s_sound.pause();
+f_sound.pause();
+c_sound.pause();
+v_sound.pause();
+j_sound.pause();
+k_sound.pause();
+d_sound.pause();
+r_sound.pause();
+p_sound.pause();
+ph_sound.pause();
 }
 else if (item === 'Spanish'){
 background(sp);
-text(`${languages[1].name}`, mouseX, mouseY, pmouseX, pmouseY);
+rect(windowWidth/9, windowHeight/3, 1500, 600);
+text(`${languages[1].name}`, 1500, 400);
+a_sound.pause();
+s_sound.play();
+f_sound.pause();
+c_sound.pause();
+v_sound.pause();
+j_sound.pause();
+k_sound.pause();
+d_sound.pause();
+r_sound.pause();
+p_sound.pause();
+ph_sound.pause();
 }
 else if (item === 'French'){
   background(fr);
-text(`${languages[2].name}`, mouseX, mouseY, pmouseX, pmouseY);
+  rect(windowWidth/9, windowHeight/3, 1500, 600);
+text(`${languages[2].name}`, 1500, 400);
+a_sound.pause();
+s_sound.pause();
+f_sound.play();
+c_sound.pause();
+v_sound.pause();
+j_sound.pause();
+k_sound.pause();
+d_sound.pause();
+r_sound.pause();
+p_sound.pause();
+ph_sound.pause();
 }
 else if (item === 'Chinese'){
   background(ch);
-text(`${languages[3].name}`, mouseX, mouseY, pmouseX, pmouseY);
+  rect(windowWidth/9, windowHeight/3, 1500, 600);
+text(`${languages[3].name}`, 1500, 400);
+a_sound.pause();
+s_sound.pause();
+f_sound.pause();
+c_sound.play();
+v_sound.pause();
+j_sound.pause();
+k_sound.pause();
+d_sound.pause();
+r_sound.pause();
+p_sound.pause();
+ph_sound.pause();
 }
 else if (item === 'Vietnamese'){
   background(vi);
-text(`${languages[4].name}`, mouseX, mouseY, pmouseX, pmouseY);
+  rect(windowWidth/9, windowHeight/3, 1500, 600);
+text(`${languages[4].name}`, 1500, 400);
+a_sound.pause();
+s_sound.pause();
+f_sound.pause();
+c_sound.pause();
+v_sound.play();
+j_sound.pause();
+k_sound.pause();
+d_sound.pause();
+r_sound.pause();
+p_sound.pause();
+ph_sound.pause();
 }
 else if (item === 'Japanese'){
   background(jp);
-text(`${languages[5].name}`, mouseX, mouseY, pmouseX, pmouseY);
+  rect(windowWidth/9, windowHeight/3, 1500, 600);
+text(`${languages[5].name}`, 1500, 400);
+a_sound.pause();
+s_sound.pause();
+f_sound.pause();
+c_sound.pause();
+v_sound.pause();
+j_sound.play();
+k_sound.pause();
+d_sound.pause();
+r_sound.pause();
+p_sound.pause();
+ph_sound.pause();
 }
 else if (item === 'Korean'){
   background(kr);
-text(`${languages[6].name}`, mouseX, mouseY, pmouseX, pmouseY);
+  rect(windowWidth/9, windowHeight/3, 1500, 600);
+text(`${languages[6].name}`, 1500, 400);
+a_sound.pause();
+s_sound.pause();
+f_sound.pause();
+c_sound.pause();
+v_sound.pause();
+j_sound.pause();
+k_sound.play();
+d_sound.pause();
+r_sound.pause();
+p_sound.pause();
+ph_sound.pause();
 }
 else if (item === 'German'){
+
   background(ge);
-text(`${languages[7].name}`, mouseX, mouseY, pmouseX, pmouseY);
+  rect(windowWidth/9, windowHeight/3, 1500, 600);
+  rect(700, 10, 500, 300);
+text(`${languages[7].name}`, 1500, 400);
+a_sound.pause();
+s_sound.pause();
+f_sound.pause();
+c_sound.pause();
+v_sound.pause();
+j_sound.pause();
+k_sound.pause();
+d_sound.play();
+r_sound.pause();
+p_sound.pause();
+ph_sound.pause();
 }
 else if (item === 'Russian'){
   background(ru);
-text(`${languages[8].name}`, mouseX, mouseY, pmouseX, pmouseY);
+  rect(windowWidth/9, windowHeight/3, 1500, 600);
+text(`${languages[8].name}`,1500, 400);
+a_sound.pause();
+s_sound.pause();
+f_sound.pause();
+c_sound.pause();
+v_sound.pause();
+j_sound.pause();
+k_sound.pause();
+d_sound.pause();
+r_sound.play();
+p_sound.pause();
+ph_sound.pause();
 }
 else if (item === 'Portuguese'){
   background(po);
-text(`${languages[9].name}`, mouseX, mouseY, pmouseX, pmouseY);
+  rect(windowWidth/9, windowHeight/3, 1500, 600);
+text(`${languages[9].name}`, 1500, 400);
+a_sound.pause();
+s_sound.pause();
+f_sound.pause();
+c_sound.pause();
+v_sound.pause();
+j_sound.pause();
+k_sound.pause();
+d_sound.pause();
+r_sound.pause();
+p_sound.play();
+ph_sound.pause();
 }
 else if (item === 'Filipino'){
   background(fi);
-text(`${languages[10].name}`, mouseX, mouseY, pmouseX, pmouseY);
+  rect(windowWidth/9, windowHeight/3, 1500, 600);
+text(`${languages[10].name}`, 1500, 400);
+a_sound.pause();
+s_sound.pause();
+f_sound.pause();
+c_sound.pause();
+v_sound.pause();
+j_sound.pause();
+k_sound.pause();
+d_sound.pause();
+r_sound.pause();
+p_sound.pause();
+ph_sound.play();
 }
-
 }
-
-
-function draw() {
-
-  // background(220, 5);
-  fillColor = 255;
-  strokeWeight(strokeWidth);
-  textSize(30);
-
-
-  noiseOffset += 0.05;
-  strokeWidth = noise(noiseOffset) * 100;
-
-
-
-
-  if (mouseIsPressed ==true){
-    mySelectEvent(mouseX, mouseY, pmouseX, pmouseY);
-  }
-
-}
-
-// function drawGrid(){
-// numCells = 20;
-// fillColor = 255;
-//
-// for (let i = 0; i<= width; i += width / numCells){
-//   for (let j = 0; j <= height; j += height / numCells){
-//     if (fillColor === 255){
-//       fillColor = 200;
-//     } else {
-//       fillColor = 255;
-//     }
-//     fill(fillColor);
-//     rect(i, j, width / numCells, height / numCells);
-//   }
-// }
-// }
 
 function keyTyped(){
 
