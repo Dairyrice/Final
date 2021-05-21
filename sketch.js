@@ -37,6 +37,30 @@ let languages = [{name: "Thank you"},
                   {name: "Obrigada"},
                   {name: "Salamat"},];
 
+let greetings = [{name: "Hello"},
+                  {name: "Hola"},
+                  {name: "Bonjour"},
+                  {name: "你好"},
+                  {name: "Chào"},
+                  {name: "こんにちは"},
+                  {name: "안녕하세요"},
+                  {name: "Hallo"},
+                  {name: "Привет"},
+                  {name: "Olá"},
+                  {name: "Kamusta"},];
+
+let cheer = [{name: "Cheers!"},
+              {name: "Salud!"},
+              {name: "Saunte"},
+              {name: "干杯"},
+              {name: "Dzô"},
+              {name: "乾杯"},
+              {name: "건배"},
+              {name: "Prost"},
+              {name: "За здоровье"},
+              {name: "Saúde"},
+              {name: "tagay"},];
+
 function preload(){
 soundFormats('mp3', 'ogg');
 a_sound = loadSound('assets/Sound_1');
@@ -90,7 +114,6 @@ rect(windowWidth/9, windowHeight/3, 1500, 600);
 
 function draw() {
 
-
   fillColor = 255;
   strokeWeight(3);
   textSize(30);
@@ -111,6 +134,8 @@ if (item === 'English'){
 background(am);
 rect(windowWidth/9, windowHeight/3, 1500, 600);
 text(`${languages[0].name}`, 1500, 400);
+text(`${greetings[0].name}`, 1500, 500);
+text(`${cheer[0].name}`, 1500, 600);
 a_sound.play();
 s_sound.pause();
 f_sound.pause();
@@ -127,6 +152,8 @@ else if (item === 'Spanish'){
 background(sp);
 rect(windowWidth/9, windowHeight/3, 1500, 600);
 text(`${languages[1].name}`, 1500, 400);
+text(`${greetings[1].name}`, 1500, 500);
+text(`${cheer[1].name}`, 1500, 600);
 a_sound.pause();
 s_sound.play();
 f_sound.pause();
@@ -143,6 +170,8 @@ else if (item === 'French'){
   background(fr);
   rect(windowWidth/9, windowHeight/3, 1500, 600);
 text(`${languages[2].name}`, 1500, 400);
+text(`${greetings[2].name}`, 1500, 500);
+text(`${cheer[2].name}`, 1500, 600);
 a_sound.pause();
 s_sound.pause();
 f_sound.play();
@@ -159,6 +188,8 @@ else if (item === 'Chinese'){
   background(ch);
   rect(windowWidth/9, windowHeight/3, 1500, 600);
 text(`${languages[3].name}`, 1500, 400);
+text(`${greetings[3].name}`, 1500, 500);
+text(`${cheer[3].name}`, 1500, 600);
 a_sound.pause();
 s_sound.pause();
 f_sound.pause();
@@ -175,6 +206,8 @@ else if (item === 'Vietnamese'){
   background(vi);
   rect(windowWidth/9, windowHeight/3, 1500, 600);
 text(`${languages[4].name}`, 1500, 400);
+text(`${greetings[4].name}`, 1500, 500);
+text(`${cheer[4].name}`, 1500, 600);
 a_sound.pause();
 s_sound.pause();
 f_sound.pause();
@@ -191,6 +224,8 @@ else if (item === 'Japanese'){
   background(jp);
   rect(windowWidth/9, windowHeight/3, 1500, 600);
 text(`${languages[5].name}`, 1500, 400);
+text(`${greetings[5].name}`, 1500, 500);
+text(`${cheer[5].name}`, 1500, 600);
 a_sound.pause();
 s_sound.pause();
 f_sound.pause();
@@ -207,6 +242,8 @@ else if (item === 'Korean'){
   background(kr);
   rect(windowWidth/9, windowHeight/3, 1500, 600);
 text(`${languages[6].name}`, 1500, 400);
+text(`${greetings[6].name}`, 1500, 500);
+text(`${cheer[6].name}`, 1500, 600);
 a_sound.pause();
 s_sound.pause();
 f_sound.pause();
@@ -225,6 +262,8 @@ else if (item === 'German'){
   rect(windowWidth/9, windowHeight/3, 1500, 600);
   rect(700, 10, 500, 300);
 text(`${languages[7].name}`, 1500, 400);
+text(`${greetings[7].name}`, 1500, 500);
+text(`${cheer[7].name}`, 1500, 600);
 a_sound.pause();
 s_sound.pause();
 f_sound.pause();
@@ -241,6 +280,8 @@ else if (item === 'Russian'){
   background(ru);
   rect(windowWidth/9, windowHeight/3, 1500, 600);
 text(`${languages[8].name}`,1500, 400);
+text(`${greetings[8].name}`, 1500, 500);
+text(`${cheer[8].name}`, 1500, 600);
 a_sound.pause();
 s_sound.pause();
 f_sound.pause();
@@ -257,6 +298,8 @@ else if (item === 'Portuguese'){
   background(po);
   rect(windowWidth/9, windowHeight/3, 1500, 600);
 text(`${languages[9].name}`, 1500, 400);
+text(`${greetings[9].name}`, 1500, 500);
+text(`${cheer[9].name}`, 1500, 600);
 a_sound.pause();
 s_sound.pause();
 f_sound.pause();
@@ -273,6 +316,8 @@ else if (item === 'Filipino'){
   background(fi);
   rect(windowWidth/9, windowHeight/3, 1500, 600);
 text(`${languages[10].name}`, 1500, 400);
+text(`${greetings[10].name}`, 1500, 500);
+text(`${cheer[10].name}`, 1500, 600);
 a_sound.pause();
 s_sound.pause();
 f_sound.pause();
